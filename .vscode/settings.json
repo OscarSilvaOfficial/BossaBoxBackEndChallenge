@@ -1,0 +1,19 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Test",
+      "group": "Test",
+      "database": "test",
+      "username": "root",
+      "password": "123456"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
