@@ -16,7 +16,6 @@ export class ToolsRepository {
   }
 
   async removeTool(id: number) {
-    
     try {
       return await this.prisma.tools.delete({
         where: { id: id }
@@ -32,7 +31,7 @@ export class ToolsRepository {
 
     try {
 
-      response = await this.prisma.tools.update({
+      return await this.prisma.tools.update({
         where: { id: id },
         data: {
           title: request.title,
@@ -42,10 +41,8 @@ export class ToolsRepository {
       })
       
     } catch (error) {
-      response = error
-    } finally {
-      return response
-    }
+      throw error
+    } 
   
   }
 

@@ -28,11 +28,7 @@ class RestController {
 
   @Delete('/:id')
   async delete(@Param('id') id: number) {
-    try {
-      return this.tools.removeTool(id)
-    } catch (error) {
-      return error
-    } 
+    return this.tools.removeTool(id)
   }
 
 }
