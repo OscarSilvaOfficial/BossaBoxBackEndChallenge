@@ -1,2 +1,2 @@
-DELETE http://127.0.0.1:8000/100 HTTP/1.1
+DELETE http://127.0.0.1:3000/10 HTTP/1.1
 content-type: application/json

@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "coenraads.bracket-pair-colorizer",
+    "formulahendry.code-runner",
+    "ms-azuretools.vscode-docker",
+    "mikestead.dotenv",
+    "dracula-theme.theme-dracula",
+    "donjayamanne.githistory"
+  ]
+}

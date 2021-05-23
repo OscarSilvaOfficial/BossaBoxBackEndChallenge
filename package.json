@@ -4,8 +4,7 @@
   "description": "",
   "main": "main.ts",
   "dependencies": {
-    "@prisma/client": "^2.22.1",
-    "body-parser": "^1.19.0",
+    "@prisma/client": "^2.23.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "express": "^4.17.1",
@@ -19,11 +18,11 @@
     "schema": "src/repository/schema.prisma"
   },
   "devDependencies": {
-    "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.11",
     "@types/node": "^14.0.13",
-    "prisma": "^2.22.1",
+    "prisma": "^2.23.0",
     "ts-node-dev": "^1.1.6",
+    "tsc": "^2.0.3",
     "typescript": "^4.2.3"
   },
   "scripts": {

@@ -1,6 +1,9 @@
-PATCH http://127.0.0.1:8000/1 HTTP/1.1
+PATCH http://127.0.0.1:3000/3 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Oscar1"
+    "title": "Youtube",
+    "link": "https://stackoverflow.com",
+    "description": "Verdadeiro dev por trás",
+    "tags": ["Youtubes"]
 }

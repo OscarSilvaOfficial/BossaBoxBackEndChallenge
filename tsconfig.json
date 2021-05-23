@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
-    "rootDir": "./src",
-    "outDir": "./out",
-    "esModuleInterop": true,
-    "strict": true,
+    "outDir": "out",
     "sourceMap": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true

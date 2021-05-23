@@ -10,15 +10,14 @@ generator client {
 
 model Tools {
   id    Int     @id @default(autoincrement())
-  title String  @unique
+  title String  
   link  String
-  description String
+  description String 
   tags Tags[]
 }
 
 model Tags {
   id  Int @id @default(autoincrement())
   name  String
-  tools Tools? @relation(fields: [toolsId], references: [id])
-  toolsId Int
+  tools Tools[]
 }

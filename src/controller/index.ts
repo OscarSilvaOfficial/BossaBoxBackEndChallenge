@@ -1,58 +1,40 @@
-// import { Tools } from '../models/Tools'
-// import { JsonController, Param, Body, Get, Post, Delete, Patch } from 'routing-controllers';
+import { JsonController, Param, Body, Get, Post, Delete, Patch, HttpCode } from 'routing-controllers';
+import { RequestBody } from '../interfaces/requestBody';
+import { ToolsRepository } from '../repository/tools'
 
-// @JsonController()
-// class RestController {
-  
-//   @Get('/')
-//   async select() {
-//     return 'await Tools.find()'
-//   }
+@JsonController()
+class RestController {
 
-//   @Post('/')
-//   async insert(@Body() request: any) {
+  private tools: ToolsRepository
 
-//     const generic = new Tools(request.name)
-//     generic.save()
-//     return generic
-    
-//   }
+  constructor() {
+    this.tools = new ToolsRepository()
+  }
 
-//   @Patch('/:id')
-//   async update(@Param('id') id: number, @Body() request: any) {
-    
-//     const tools = await Tools.findOne(id)
+  @Get('/')
+  async getAllTools() {
+    return this.tools.getAllTools()
+  }
 
-//     if (tools) {
-//       tools.title = request.title
-//       tools.link = request.link
-//       tools.description = request.description
-//       tools.tags = request.tags
-//       console.log(request.tags)
-//       tools.save()
-//     } 
-//     else {
-//       return 'Id não existe'
-//     }
+  @Post('/')
+  async insertTool(@Body() request: RequestBody) {
+    return this.tools.createTool(request)
+  }
 
-//     return tools
+  @Patch('/:id')
+  async updateTool(@Param('id') id: number, @Body() request: RequestBody) {
+    return this.tools.updateTool(id, request)
+  }
 
-//   }
+  @Delete('/:id')
+  async delete(@Param('id') id: number) {
+    try {
+      return this.tools.removeTool(id)
+    } catch (error) {
+      return error
+    } 
+  }
 
-//   @Delete('/:id')
-//   async delete(@Param('id') id: number) {
+}
 
-//     const generic = await Tools.findOne(id)
-
-//     if (generic) {
-//       return Tools.remove(generic)
-//     }
-//     else {
-//       return 'Id não existe'
-//     }
-
-//   }
-
-// }
-
-// export default RestController
+export default RestController

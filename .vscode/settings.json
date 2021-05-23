@@ -8,12 +8,10 @@
       "server": "localhost",
       "port": 3306,
       "driver": "MySQL",
-      "name": "Test",
-      "group": "Test",
-      "database": "test",
+      "name": "DB Teste",
+      "database": "tools",
       "username": "root",
       "password": "123456"
     }
-  ],
-  "sqltools.useNodeRuntime": true
+  ]
 }
