@@ -11,22 +11,22 @@ class RestController {
     this.tools = new ToolsRepository()
   }
 
-  @Get('/')
+  @Get('/tools')
   async getAllTools() {
     return this.tools.getAllTools()
   }
 
-  @Post('/')
+  @Post('/tools/')
   async insertTool(@Body() request: RequestBody) {
     return this.tools.createTool(request)
   }
 
-  @Patch('/:id')
+  @Patch('/tools/:id')
   async updateTool(@Param('id') id: number, @Body() request: RequestBody) {
     return this.tools.updateTool(id, request)
   }
 
-  @Delete('/:id')
+  @Delete('/tools/:id')
   async delete(@Param('id') id: number) {
     return this.tools.removeTool(id)
   }
