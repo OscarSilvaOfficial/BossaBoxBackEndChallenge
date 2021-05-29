@@ -1,4 +1,4 @@
-const { requestApi } = require('./axiosBase.js');
+const { requestApi } = require('../base/axiosBase.js');
 
 module.exports = {
 
@@ -10,7 +10,7 @@ module.exports = {
       tags: ['test 1', 'test 2']
     }
   
-    await requestApi.post('/tools', payload).then(res => console.log(res.data))
+    await requestApi.post('/tools', payload).then(res => res.data)
   }
 
 }

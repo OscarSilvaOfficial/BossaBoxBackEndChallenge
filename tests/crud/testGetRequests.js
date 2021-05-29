@@ -1,4 +1,4 @@
-const { requestApi } = require('./axiosBase.js');
+const { requestApi } = require('../base/axiosBase.js');
 
 module.exports = {
 
