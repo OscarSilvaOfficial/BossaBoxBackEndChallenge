@@ -1,8 +1,12 @@
-import { JsonController, Param, Body, Get, Post, Delete, Patch, HttpCode } from 'routing-controllers';
+import { JsonController, Param, Body, Get, Post, Delete, Patch, UseBefore } from 'routing-controllers';
 import { RequestBody } from '../interfaces/requestBody';
 import { ToolsRepository } from '../repository/tools'
+import { getRequestsMiddleware } from '../middlewares/requestLogger'
+import { validateApiToken } from '../middlewares/authentication'
+
 
 @JsonController()
+@UseBefore(getRequestsMiddleware, validateApiToken)
 class RestController {
 
   private tools: ToolsRepository
