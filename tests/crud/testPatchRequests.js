@@ -1,8 +1,7 @@
-const { requestApi } = require('./axiosBase.js');
+const { requestApi } = require('../base/axiosBase.js');
 
 module.exports = {
 
-  
   patchTool: async () => {
     const payload = {
       title: 'test1',
@@ -10,8 +9,11 @@ module.exports = {
       description: 'Teste de inseção de tool',
       tags: ['test 1', 'test 2']
     }
+
+    const items = await requestApi.get('/tools').then(res => res.data)
+    const id = items[0].id
   
-    await requestApi.patch('/tools/1', payload).then(res => console.log(res.data))
+    await requestApi.patch(`/tools/${id}`, payload).then(res => res.data)
   }
 
 }
