@@ -3,11 +3,11 @@
 ## Ferramentas utilizadas
 
 <details><summary><b>Docker</b></summary>
-  Utilizado para montar o ambiente de desenvolvimento com MySQL  
+  Utilizado para montar o ambiente de desenvolvimento com MySQL. 
 </details>
 
 <details><summary><b>Rest Client</b></summary>
-  Utilizado para montar as requisições e documentalas  
+  Utilizado para montar as requisições e documentalas.
 </details>
 
 <details><summary><b>Typescript</b></summary>
@@ -18,6 +18,11 @@
   ORM utilizado para construir modelos de tabela, persistência com o banco de dados e geração de migrações para versionamento de banco de dados.
 </details>
 
+<details><summary><b>Jest</b></summary>
+  Utilizo essa lib para testar os endpoints disponíveis na aplicação e o axios para fazer as
+  requisiçõpes HTTP.
+</details>
+
 <details><summary><b>Node</b></summary>
-  Utilizado para transpilar e rodar do Typescript
+  Utilizado para transpilar e rodar do Typescript.
 </details>
