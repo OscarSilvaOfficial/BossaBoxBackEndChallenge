@@ -1,9 +1,12 @@
 import "reflect-metadata"
-import RestController from './controller/index'
+import RestController from './controller/api'
+import TokenController  from './controller/token'
 import { createExpressServer } from 'routing-controllers';
 
 const app = createExpressServer({
-  controllers: [RestController], // TODO Controllers
+  controllers: [
+    RestController, TokenController
+  ],
 });
 
 app.listen(3000, () => {
