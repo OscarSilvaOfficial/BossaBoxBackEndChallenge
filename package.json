@@ -41,7 +41,7 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "prestart": "npm run build",
-    "dev": "ts-node-dev --respawn --transpile-only src/main.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/pages/main.ts"
   },
   "author": "OscarSilva",
   "license": "ISC"

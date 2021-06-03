@@ -1,9 +1,7 @@
 import "reflect-metadata"
-import RestController from './controller/api'
-import TokenController  from './controller/token'
+import RestController from '../controller/api'
+import TokenController  from '../controller/token'
 import { createExpressServer } from 'routing-controllers';
-import {Tags} from 'typescript-rest-swagger';
-
 
 const app = createExpressServer({
   controllers: [
