@@ -38,7 +38,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "swaggerGen -c swaggerConfig.json -t",
-    "build": "tsc",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "prestart": "npm run build",
     "dev": "ts-node-dev --respawn --transpile-only src/main.ts"
   },
