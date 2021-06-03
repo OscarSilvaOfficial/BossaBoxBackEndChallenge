@@ -1,10 +1,12 @@
-import { JsonController, Param, Body, Get, Post, Delete, Patch, UseBefore } from 'routing-controllers';
+import { JsonController, getMetadataArgsStorage, Param, Body, Get, Post, Delete, Patch, UseBefore } from 'routing-controllers';
 import { RequestBody } from '../interfaces/requestBody';
 import { ToolsRepository } from '../repository/tools'
 import { getRequestsMiddleware } from '../middlewares/requestLogger'
 import { validateApiToken } from '../middlewares/authentication'
+import { routingControllersToSpec } from 'routing-controllers-openapi'
 
-@JsonController()
+
+@JsonController('/tools')
 @UseBefore(getRequestsMiddleware, validateApiToken)
 class RestController {
 
@@ -14,24 +16,30 @@ class RestController {
     this.tools = new ToolsRepository()
   }
 
-  @Get('/tools')
+  @Get('/')
   async getAllTools() {
     return this.tools.getAllTools()
   }
 
-  @Post('/tools/')
+  @Post('/')
   async insertTool(@Body() request: RequestBody) {
     return this.tools.createTool(request)
   }
 
-  @Patch('/tools/:id')
+  @Patch('/:id')
   async updateTool(@Param('id') id: number, @Body() request: RequestBody) {
     return this.tools.updateTool(id, request)
   }
 
-  @Delete('/tools/:id')
+  @Delete('/:id')
   async delete(@Param('id') id: number) {
     return this.tools.removeTool(id)
+  }
+
+  @Get('/docs')
+  docs() {
+    const storage = getMetadataArgsStorage()
+    return routingControllersToSpec(storage)
   }
 
 }
