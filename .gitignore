@@ -1,5 +1,5 @@
 node_modules
 *lock.json
-out/
+out
 yarn.lock
-migrations/
+migrations
