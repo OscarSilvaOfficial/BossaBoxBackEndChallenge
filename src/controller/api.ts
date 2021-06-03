@@ -4,7 +4,6 @@ import { ToolsRepository } from '../repository/tools'
 import { getRequestsMiddleware } from '../middlewares/requestLogger'
 import { validateApiToken } from '../middlewares/authentication'
 
-
 @JsonController()
 @UseBefore(getRequestsMiddleware, validateApiToken)
 class RestController {
