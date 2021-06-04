@@ -2,7 +2,7 @@
   "name": "api-test",
   "version": "1.0.0",
   "description": "",
-  "main": "main.ts",
+  "main": "src/api/main.ts",
   "dependencies": {
     "axios": "^0.21.1",
     "class-transformer": "^0.3.1",
