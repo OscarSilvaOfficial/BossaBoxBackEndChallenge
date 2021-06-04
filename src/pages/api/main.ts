@@ -9,7 +9,8 @@ const app = createExpressServer({
   ],
 });
 
+const PORT = process.env.PORT ? process.env.PORT : 3000
 
-export default app.listen(80, () => {
-  console.log(`Server on | PORT 80`)
+export default app.listen(3000, () => {
+  console.log(`Server on | PORT ${PORT}`)
 })
