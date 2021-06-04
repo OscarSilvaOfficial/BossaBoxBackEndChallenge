@@ -26,3 +26,5 @@
 <details><summary><b>Node</b></summary>
   Utilizado para transpilar e rodar do Typescript.
 </details>
+
+## Dependências

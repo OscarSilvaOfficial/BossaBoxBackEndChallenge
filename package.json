@@ -4,7 +4,6 @@
   "description": "",
   "main": "main.ts",
   "dependencies": {
-    "@koa/multer": "^3.0.0",
     "axios": "^0.21.1",
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
@@ -40,10 +39,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "swaggerGen -c swaggerConfig.json -t",
-    "build": "tsc --build && node out/api/main.js",
+    "build": "tsc --build",
     "clean": "tsc --build --clean",
     "prestart": "npm run build",
-    "dev": "ts-node-dev --respawn --transpile-only src/api/main.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/pages/api/main.ts"
   },
   "author": "OscarSilva",
   "license": "ISC"

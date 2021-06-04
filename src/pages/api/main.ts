@@ -1,6 +1,6 @@
 import "reflect-metadata"
-import RestController from '../controller/api'
-import TokenController  from '../controller/token'
+import RestController from '../../controller/api'
+import TokenController  from '../../controller/token'
 import { createExpressServer } from 'routing-controllers';
 
 const app = createExpressServer({
@@ -10,6 +10,6 @@ const app = createExpressServer({
 });
 
 
-app.listen(80, () => {
+export default app.listen(80, () => {
   console.log(`Server on | PORT 80`)
 })

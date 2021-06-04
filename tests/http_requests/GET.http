@@ -17,3 +17,14 @@ content-type: application/json
 GET http://localhost:3000/tools/docs HTTP/1.1
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6Ijo6ZmZmZjoxMjcuMC4wLjEiLCJpYXQiOjE2MjIzMjI1MzF9.Z86r4aLkwHMyz0VnX2vuGM2IYJUL4IMzg3a26rGRYi0
+
+### PROD
+
+GET https://bossa-box-back-end-challenge.vercel.app/api-token HTTP/1.1
+content-type: application/json
+
+### PROD
+
+GET https://bossa-box-back-end-challenge.vercel.app/tools/docs HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6Ijo6ZmZmZjoxMjcuMC4wLjEiLCJpYXQiOjE2MjIzMjI1MzF9.Z86r4aLkwHMyz0VnX2vuGM2IYJUL4IMzg3a26rGRYi0
