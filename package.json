@@ -41,6 +41,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "swaggerGen -c swaggerConfig.json -t",
     "build": "tsc --build",
+    "migrate": "npx prisma migrate dev",
     "clean": "tsc --build --clean",
     "prestart": "npm run build",
     "dev": "ts-node-dev --respawn --transpile-only src/api/main.ts"
