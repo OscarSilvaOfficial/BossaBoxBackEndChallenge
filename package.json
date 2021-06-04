@@ -40,8 +40,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "swaggerGen -c swaggerConfig.json -t",
-    "build": "npx tsc --build",
-    "clean": "npx tsc --build --clean",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "prestart": "npm run build",
     "dev": "ts-node-dev --respawn --transpile-only src/api/main.ts"
   },
