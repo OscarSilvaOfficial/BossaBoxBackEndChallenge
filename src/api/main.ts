@@ -9,10 +9,6 @@ const app = createExpressServer({
   ],
 });
 
-app.use('/', (req, res) => {
-  res.send('ok')
-})
-
 const PORT = process.env.PORT ? process.env.PORT : 3000
 
 app.listen(3000, () => {
