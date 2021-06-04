@@ -4,11 +4,11 @@ import { getRequestsMiddleware } from '../middlewares/requestLogger'
 import { routingControllersToSpec } from 'routing-controllers-openapi'
 
 
-@JsonController('/api-token')
+@JsonController('/api')
 @UseBefore(getRequestsMiddleware)
 class TokenController {
   
-  @Get('/')
+  @Get('/token')
   generateApiToken(@Req() request: any) {
     const addr = request.connection.remoteAddress
     return {

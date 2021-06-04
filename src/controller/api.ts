@@ -1,4 +1,4 @@
-import { JsonController, getMetadataArgsStorage, Param, Body, Get, Post, Delete, Patch, UseBefore } from 'routing-controllers';
+import { JsonController, getMetadataArgsStorage, Param, Body, Get, Post, Delete, Patch, UseBefore, HttpCode } from 'routing-controllers';
 import { RequestBody } from '../interfaces/requestBody';
 import { ToolsRepository } from '../repository/tools'
 import { getRequestsMiddleware } from '../middlewares/requestLogger'
@@ -21,6 +21,7 @@ class RestController {
     return this.tools.getAllTools()
   }
 
+  @HttpCode(201)
   @Post('/')
   async insertTool(@Body() request: RequestBody) {
     return this.tools.createTool(request)
@@ -31,6 +32,7 @@ class RestController {
     return this.tools.updateTool(id, request)
   }
 
+  @HttpCode(204)
   @Delete('/:id')
   async delete(@Param('id') id: number) {
     return this.tools.removeTool(id)
