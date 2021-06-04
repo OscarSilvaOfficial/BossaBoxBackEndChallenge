@@ -15,6 +15,8 @@ app.use('/', (req, res) => {
 
 const PORT = process.env.PORT ? process.env.PORT : 3000
 
-export default app.listen(3000, () => {
+app.listen(3000, () => {
   console.log(`Server on | PORT ${PORT}`)
 })
+
+export default app
