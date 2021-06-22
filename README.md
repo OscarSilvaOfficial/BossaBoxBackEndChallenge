@@ -86,7 +86,7 @@ Authorization: 123abc123abc123abc123abc123abc
   },
 
   "/api/docs": {
-    "HTTP Methods": ["GET"]
+    "HTTP Methods": ["GET"],
   },
 
   "/tools": {
