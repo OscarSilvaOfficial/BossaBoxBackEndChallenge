@@ -1,4 +1,4 @@
-# Challenge BossaBox
+# Challenge | BossaBox
 
 ### Ferramentas utilizadas
 
