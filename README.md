@@ -82,11 +82,11 @@ Authorization: 123abc123abc123abc123abc123abc
 {
 
   "/api/token": {
-    "HTTP Methods": ["GET"],
+    "HTTP Methods": ["GET"]
   },
 
   "/api/docs": {
-    "HTTP Methods": ["GET"],
+    "HTTP Methods": ["GET"]
   },
 
   "/tools": {
